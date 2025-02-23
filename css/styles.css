@@ -1,0 +1,296 @@
+/* بداية القواعد العامه  */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cairo", serif;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium  */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large  */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* نهاية القواعد العامه */
+
+/* بداية شريط التنقل */
+.navbar {
+  background-color: #00627a5b;
+  color: #fff;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo img {
+  width: 80px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 800;
+  transition: 0.3s;
+}
+.sign-in {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  gap: 5px;
+  transition: 0.3s;
+}
+
+.sign-in:hover button {
+  scale: 110%;
+}
+.sign-in i {
+  font-size: 26px;
+  color: #3084b5;
+}
+
+.nav-links a:hover {
+  color: #3084b5;
+}
+
+.sign-in button {
+  padding: 5px 5px;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 800;
+  transition: 0.3s;
+}
+
+/* نهاية شريط التنقل */
+
+/* القسم الرئيسي */
+.hero {
+  height: 500px;
+  text-align: center;
+  padding: 50px;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.hero .background-clip {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+@media (min-aspect-ratio: 16/9) {
+  .background-clip {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .background-clip {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.hero .container h1 {
+  font-size: 36px;
+  color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  background-color: #ffffff21;
+  position: relative;
+}
+
+.hero .container h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  background-color: #3084b5;
+  height: 100%;
+}
+.hero .container h1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  background-color: #3084b5;
+  height: 100%;
+}
+
+.hero .container p {
+  font-size: 18px;
+  color: #d1d1d1;
+  font-weight: 700;
+}
+
+.hero .container .cta {
+  margin-top: 100px;
+  background-color: #3084b5;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 18px 0 18px 0px;
+  height: 50px;
+  font-size: 24px;
+  padding: 13px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+.hero .container .cta:hover {
+  background-color: #fff;
+  color: #3084b5;
+}
+
+.search-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-btn img {
+  bottom: 34px;
+  position: absolute;
+  width: 75px;
+  left: 540px;
+}
+
+.search-btn input {
+  margin-top: 100px;
+  background-color: #ffffff88;
+  border-radius: 18px 0 18px 0;
+  box-shadow: 0 10px 25px rgb(0, 0, 0, 0.3);
+  border: none;
+  outline: none;
+  width: 20%;
+  height: 50px;
+  font-size: large;
+  padding: 0 20px;
+  transition: 0.3s;
+}
+
+.search-btn input::placeholder {
+  font-size: medium;
+  font-weight: 600;
+}
+
+.search-btn input:hover {
+  width: 45%;
+}
+.search-btn input:focus {
+  background-color: #ffffffb9;
+}
+/* قائمة الدورات */
+.courses {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.courses h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #004d61;
+  font-weight: 800;
+}
+
+.courses .container .course-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.course-list img {
+  width: 100%;
+  height: 210px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.course-card {
+  padding-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #d1d1d1;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgb(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.course-card:hover {
+  scale: 110%;
+}
+
+.course-card h3 {
+  font-size: 22px;
+  color: #004d61;
+  font-weight: 800;
+}
+
+.course-card p {
+  font-size: 16px;
+  color: #555;
+  font-weight: 700;
+}
+
+.course-card button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #004d61;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 800;
+  transition: 0.3s;
+}
+
+.course-card button:hover {
+  background-color: #007f8c;
+}
