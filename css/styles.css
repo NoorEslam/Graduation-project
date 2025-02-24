@@ -45,6 +45,11 @@ body {
 .navbar {
   background-color: #00627a5b;
   color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
 }
 
 .navbar .container {
@@ -60,6 +65,7 @@ body {
   list-style: none;
   display: flex;
   gap: 15px;
+  direction: rtl;
 }
 
 .nav-links a {
@@ -107,7 +113,7 @@ body {
 .hero {
   height: 500px;
   text-align: center;
-  padding: 50px;
+  padding: 80px 50px;
   background-color: rgb(0, 0, 0, 0.5);
 }
 
@@ -116,19 +122,8 @@ body {
   right: 0;
   bottom: 0;
   z-index: -1;
-}
-@media (min-aspect-ratio: 16/9) {
-  .background-clip {
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-aspect-ratio: 16/9) {
-  .background-clip {
-    width: auto;
-    height: 100%;
-  }
+  width: 100%;
+  height: auto;
 }
 
 .hero .container h1 {
@@ -163,10 +158,10 @@ body {
   font-size: 18px;
   color: #d1d1d1;
   font-weight: 700;
+  direction: rtl;
 }
 
 .hero .container .cta {
-  margin-top: 100px;
   background-color: #3084b5;
   color: #fff;
   border: none;
@@ -184,6 +179,7 @@ body {
 }
 
 .search-btn {
+  margin-top: 100px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -195,11 +191,10 @@ body {
   bottom: 34px;
   position: absolute;
   width: 75px;
-  left: 540px;
+  left: 450px;
 }
 
 .search-btn input {
-  margin-top: 100px;
   background-color: #ffffff88;
   border-radius: 18px 0 18px 0;
   box-shadow: 0 10px 25px rgb(0, 0, 0, 0.3);
@@ -210,6 +205,7 @@ body {
   font-size: large;
   padding: 0 20px;
   transition: 0.3s;
+  direction: rtl;
 }
 
 .search-btn input::placeholder {
@@ -223,6 +219,77 @@ body {
 .search-btn input:focus {
   background-color: #ffffffb9;
 }
+/* الوصف  */
+
+.description {
+  padding: 50px;
+  position: relative;
+  background-color: #fff;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .shape {
+  position: absolute;
+  height: 250px;
+  width: 100%;
+  background: #3084b5;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.container .shape::before,
+.container .shape::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50% 100%;
+}
+
+.container .shape::before {
+  width: 55%;
+  height: 100%;
+  background-color: #3084b5;
+  right: 0px;
+  top: 34%;
+}
+.container .shape::after {
+  width: 55%;
+  height: 109%;
+  background-color: #fff;
+  left: -1.5%;
+  top: 60%;
+}
+
+.description .container {
+  margin: 100px auto;
+  width: 70%;
+}
+
+.description .container img {
+  max-width: 500px;
+  border-radius: 18px;
+  border: 3px solid #ffffff;
+  box-shadow: 0 10px 25px rgb(0, 0, 0, 0.3);
+  float: left;
+  margin-right: 15px;
+}
+
+.description-p h2 {
+  color: #fff;
+  font-size: 42px;
+  font-weight: 700;
+  padding: 0 0 20px 0;
+  direction: rtl;
+}
+.description-p p {
+  font-size: 20px;
+  direction: rtl;
+  line-height: 38px;
+  font-weight: 800;
+}
 /* قائمة الدورات */
 .courses {
   padding: 20px;
@@ -232,7 +299,7 @@ body {
 .courses h2 {
   text-align: center;
   font-size: 28px;
-  color: #004d61;
+  color: #3084b5;
   font-weight: 800;
 }
 
